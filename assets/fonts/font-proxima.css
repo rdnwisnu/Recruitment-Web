@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Proxima Nova Condensed W07 Md";
+    src: url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.eot");
+    /* IE9*/
+    src: url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.woff2") format("woff2"), /* chrome、firefox */
+    url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.woff") format("woff"), /* chrome、firefox */
+    url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("ProximaNova/552e6087f60a700b8a63f158ff363aa8.svg#Proxima Nova Condensed W07 Md") format("svg");
+    /* iOS 4.1- */
+}

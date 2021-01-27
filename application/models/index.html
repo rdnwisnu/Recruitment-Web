@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web Recruitment</title>
+  <!-- Tell the browser to be responsive to screen width -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/fontawesome-free/css/all.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/dist/css/adminlte.min.css">
+<!-- summernote -->
+<link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/summernote/summernote-bs4.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/daterangepicker/daterangepicker.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../WebRecruitment/assets/AdminLTE/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+</head>
+<body class="hold-transition sidebar-mini sidebar-collapse">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-user-cog"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> Edit Profile
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-key mr-2"></i> Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="http://localhost/WebRecruitment/auth/logout?check_status=logout" class="dropdown-item">
+            <i class="fas fa-power-off mr-2"></i> Logout
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <span class="brand-text font-weight-light">Website Recruitment</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block">Ari Wibisono</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+            <a href="http://localhost/WebRecruitment/admin" class="nav-link">
+              <i class="nav-icon fa fa-home"></i>
+              <p>
+                Home
+              </p>
+            </a>
+          </li>
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Data Users
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/users/add_users" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/users/list_users" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Report Users</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Data Job
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/job/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Jobs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/job/list_jobs" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Jobs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Report Jobs</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Data Category
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/category/add_category" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="http://localhost/WebRecruitment/category/list_category" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+</ul>
+</nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-info">
+            <div class="card-header">
+              <h1 class="card-title">
+                Create Jobs
+              </h1>
+              <!-- tools box -->
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                  <i class="fas fa-minus"></i></button>
+                <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                        title="Remove">
+                  <i class="fas fa-times"></i></button>
+              </div>
+              <!-- /. tools -->
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body pad">
+              <div class="mb-3">
+              <form action="http://localhost/WebRecruitment/job/create" method="post">
+            <div class="form-group">
+        <div class="row">
+        <div class="col-md-6">
+        <label>Title</label>
+              <input type="text" name="title" class="form-control" placeholder="Enter Name Job's">
+        </div>
+        <div class="form-group mb-3 col-md-6">
+                        <label>Category :</label>
+                        <select class="custom-select" name="job_category" id="job_category">
+                      
+                        </select>
+                      </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+        <label>Date From</label>
+                 <input type="date" name="date_from" class="form-control" placeholder="Enter Date From Job's">
+        </div>
+        <div class="col-md-6">
+        <label>Date Thru</label>
+              <input type="date" name="date_thru" class="form-control" placeholder="Enter Date Thru Job's">
+        </div>
+        </div>
+        <br>
+        <input type="file" name="file"  />
+        <br>
+              <label>Description</label>
+                <textarea class="textarea" id="summernote" placeholder="Place some text here" name="contents"
+                          style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <table>
+              <td>
+                      <button type="submit" name="btnPost" class="btn btn-block btn-primary" value='1'>Post</button>
+              </td>
+              <td>
+                      <button type="submit" name="btnReset" class="btn btn-block btn-danger" value='2'>Reset</button>
+              </td>
+            </table>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.0.4
+    </div>
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+</nav>
+</div>
+<!-- jQuery -->
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../WebRecruitment/assets/AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- DataTables -->
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- date-range-picker -->
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../WebRecruitment/assets/AdminLTE/dist/js/demo.js"></script>
+<!-- Summernote -->
+<script src="../../WebRecruitment/assets/AdminLTE/plugins/summernote/summernote-bs4.min.js"></script>
+
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('#summernote').summernote({
+                toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['fontname', ['fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+            ],
+            });
+ 
+            $(document).ready(function(){
+ 
+ $('#btnPost').submit(function(e){
+          $.ajax({
+              url:'http://localhost/WebRecruitment/job/do_upload',
+              type:"post",
+              data:new FormData(this),
+              processData:false,
+              contentType:false,
+              cache:false,
+              async:false,
+               success: function(data){
+                   console.log("Upload Image Successful.");
+            }
+          });
+     });
+  
+
+});
+
+    tampil_data_job();   //pemanggilan fungsi tampil job.
+         
+    $("#mydatajob").DataTable({
+      "responsive": true,
+      "autoWidth": true,
+    });
+         //fungsi tampil data job
+         function tampil_data_job(){
+             $.ajax({
+                 type  : 'ajax',
+                 url   : "http://localhost/WebRecruitment/job/get_jobs",
+                 async : false,
+                 dataType : 'json',
+                 success : function(data){
+                     var html = '';
+                     var i;
+                     for(i=0; i<data.length; i++){
+                         html += '<tr>'+
+                                 '<td>'+(i+1)+'</td>'+ 
+                                 '<td>'+data[i].title+'</td>'+
+                                 '<td>'+data[i].date_from+'</td>'+
+                                 '<td>'+data[i].date_thru+'</td>'+
+                                 '<td class="project-state"><span class="badge badge-success">'+data[i].active+'</span></td>'+
+                                 '<td class="project-actions text-right">'+
+                          '<a class="btn btn-primary btn-sm" href="#"><i class="fas fa-folder"></i>View</a>'+
+                          '<a class="btn btn-info btn-sm" href="#"><i class="fas fa-pencil-alt"></i>Edit</a>'+
+                          '<a class="btn btn-danger btn-sm" href="#"><i class="fas fa-trash"></i>Delete</a>'+
+                      '</td>'+
+                     '</tr>';
+                     }
+                     $('#show_data_job').html(html);
+                 }
+  
+             });
+         }
+
+    tampil_data_users();   //pemanggilan fungsi tampil users.
+         
+    $("#mydatausers").DataTable({
+      "responsive": true,
+      "autoWidth": true,
+    });
+         //fungsi tampil data job
+         function tampil_data_users(){
+             $.ajax({
+                 type  : 'ajax',
+                 url   : "http://localhost/WebRecruitment/users/get_users",
+                 async : false,
+                 dataType : 'json',
+                 success : function(data){
+                     var html = '';
+                     var i;
+                     for(i=0; i<data.length; i++){
+                        var badge= '';
+                        var permit=''; 
+                        if(data[i].level == 1){
+                            badge = 'info';
+                            permit = 'admin';
+                        }else if(data[i].level == 2){
+                            badge = 'warning';
+                            permit = 'users';
+                        }
+                         html += '<tr>'+
+                                 '<td>'+(i+1)+'</td>'+ 
+                                 '<td>'+data[i].name+'</td>'+
+                                 '<td>'+data[i].email+'</td>'+
+                                 '<td class="project-state"><span class="badge badge-'+badge+'">'+permit+'</span></td>'+
+                                 '<td class="project-actions text-right">'+
+                         '<a class="btn btn-info btn-sm" href="#"><i class="fas fa-pencil-alt"></i>Edit</a>'+
+                          '<a class="btn btn-danger btn-sm" href="#"><i class="fas fa-trash"></i>Delete</a>'+
+                      '</td>'+
+                     '</tr>';
+                     }
+                     $('#show_data_users').html(html);
+                 }
+             });
+         }
+
+         get_selected_category(); //get selected category
+
+        function get_selected_category(){
+         $.ajax({
+             type  : 'ajax',
+             url   : "http://localhost/WebRecruitment/category/get_category",
+             async : false,
+             dataType : 'json',
+             success : function(data){
+                 var html = '';
+                 var i;
+                 for(i=0; i<data.length; i++){
+                     html += '<option value="'+data[i].code_category+'">'+data[i].name_category+'</option>';
+                 }
+                 console.log(html);
+                 $('#job_category').html(html);
+             }
+
+         });
+     }
+    });
+  
+    </script>
+</body>
+</html>
